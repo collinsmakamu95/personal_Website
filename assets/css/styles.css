@@ -1,7 +1,7 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;1,200;1,400&family=Orbitron:wght@400;500;900&family=Roboto+Mono:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;1,200;1,400&family=Orbitron:wght@400;500;900&family=Roboto+Mono:wght@300&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -11,9 +11,9 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(0, 100%, 50%);
   --title-color: hsl(0, 100%, 50%);
-  --text-color: hsl(0, 0%, 8%);
+  --text-color: hsl(0, 0%, 0%);
   --text-color-light: hsl(207, 4%, 56%);
-  --body-color: hsl(207, 4%, 99%);
+  --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(207, 4%, 95%);
 
   /* Change the first number */
@@ -86,6 +86,7 @@ h3 {
   color: var(--title-color);
   font-family: var(--title-font);
   font-weight: var(--font-medium);
+  margin: 0.5rem;
 }
 
 ul {
@@ -151,7 +152,7 @@ body.dark-theme {
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
   margin-bottom: 3rem;
 }
 
@@ -247,7 +248,80 @@ body.dark-theme {
 /* Active link */
 
 /*=============== HOME ===============*/
+.home__container {
+  row-gap: 4rem;
+  padding-top: 2rem;
+}
+.home__data {
+  row-gap: 1.5rem;
+}
+.home__title {
+  text-align: center;
+  font-size: var(--biggest-font-size);
+  letter-spacing: 0.3px;
+  margin-bottom: 0.5rem;
+}
 
+.home__blob {
+  position: relative;
+  width: 290px;
+  height: 380px;
+  justify-self: center;
+  place-items: center;
+}
+.home__perfil {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.home__shape-waves,
+.home__shape-circle {
+  position: absolute;
+  opacity: 0.1;
+}
+.home__shape-waves {
+  width: 50px;
+  left: -1.5rem;
+  top: 5rem;
+}
+.home__shape-circle {
+  width: 150px;
+  bottom: -2rem;
+  right: -3rem;
+  transform: rotate(15deg);
+  z-index: -1;
+}
+.home__social {
+  justify-self: center;
+  display: flex;
+  column-gap: 1.25rem;
+}
+.home__social-link {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+.home__social-link:hover {
+  color: var(--title-color);
+}
+.home__info {
+  display: grid;
+  row-gap: 2rem;
+}
+.home__info-title {
+  font-family: var(--title-font);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.home__info-description {
+  padding-left: 0.8rem;
+}
+.home__info-number {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  padding-left: 0.8rem;
+}
 /*=============== SKILLS ===============*/
 
 /* Animation skills */
